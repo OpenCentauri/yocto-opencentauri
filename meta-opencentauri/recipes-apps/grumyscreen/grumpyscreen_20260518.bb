@@ -14,8 +14,8 @@ SRC_URI = "gitsm://github.com/pellcorp/grumpyscreen.git;protocol=https;branch=ma
     file://grumpyscreen.init \
     file://grumpyscreen.cfg \
 "
-SRCREV = "c84630a67e055de30712c90f648449d94c75bc83"
-PR = "r4"
+SRCREV = "f3ba46bed0ac27c12afdf5e4086480c47d8f0ae9"
+PR = "r5"
 
 S = "${WORKDIR}/git"
 
