@@ -27,10 +27,8 @@ start() {
 
     # udev opens the new block device to probe it, and a reset while it is
     # open fails with EBUSY. With "set -e" that used to end this script
-    # silently, before swap was ever enabled. Let udev finish, then retry.
-    if command -v udevadm >/dev/null 2>&1; then
-        udevadm settle --timeout=5 || true
-    fi
+    # silently, before swap was ever enabled. Retry until udev lets go
+    # (a few milliseconds normally, bounded at 5 s).
     tries=0
     while ! echo 1 > /sys/block/zram0/reset 2>/dev/null; do
         tries=$((tries + 1))
