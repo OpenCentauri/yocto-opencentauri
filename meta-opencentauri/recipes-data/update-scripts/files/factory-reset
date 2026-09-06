@@ -1,6 +1,0 @@
-#!/bin/sh
-
-sleep 3
-touch /data/.factory-reset
-sync
-reboot

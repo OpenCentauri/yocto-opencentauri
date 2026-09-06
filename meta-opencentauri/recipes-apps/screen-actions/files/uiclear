@@ -1,5 +1,0 @@
-#!/bin/sh
-
-curl -s -X POST http://localhost/printer/gcode/script \
-    -H "Content-Type: application/json" \
-    -d "{\"script\": \"_CLOSE_PROMPT\"}"

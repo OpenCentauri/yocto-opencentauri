@@ -1,4 +1,0 @@
-[display.framebuffer]
-fb_path = "/dev/fb0"
-event_path = "/dev/input/event0"
-buffering = "single"
